@@ -1,0 +1,12 @@
+{
+  "license": "UNLICENSED",
+  "scripts": {
+    "setup": "yarn && yarn prepare && yarn setup:api && yarn setup:web",
+    "setup:api": "cd api && yarn",
+    "setup:web": "cd web && yarn",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "husky": "^8.0.2"
+  }
+}

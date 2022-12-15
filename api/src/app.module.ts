@@ -7,11 +7,8 @@ import { UserModule } from './users/user.module';
 const routes: Routes = [{ path: '/users', module: UserModule }];
 
 @Module({
-  imports: [
-    UserModule,
-    RouterModule.register([{ path: '/api', children: routes }]),
-  ],
-  controllers: [AppController],
-  providers: [AppService],
+	imports: [UserModule, RouterModule.register([{ path: '/api', children: routes }])],
+	controllers: [AppController],
+	providers: [AppService],
 })
 export class AppModule {}
