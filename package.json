@@ -1,4 +1,5 @@
 {
+  "license": "UNLICENSED",
   "scripts": {
     "setup": "yarn && yarn prepare && yarn setup:api && yarn setup:web",
     "setup:api": "cd api && yarn",
