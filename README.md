@@ -11,6 +11,10 @@ $ yarn setup
 ### Running the app
 
 ```bash
+$ yarn dev:api
+
+# or
+
 # go to api directory
 $ cd api
 
@@ -45,6 +49,10 @@ $ npm run test:cov
 ## Running the app
 
 ```bash
+$ yarn dev:web
+
+# or
+
 # go to web directory
 $ cd web
 

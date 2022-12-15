@@ -4,7 +4,9 @@
     "setup": "yarn && yarn prepare && yarn setup:api && yarn setup:web",
     "setup:api": "cd api && yarn",
     "setup:web": "cd web && yarn",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "dev:api": "cd api && yarn start:dev",
+    "dev:web": "cd web && yarn dev"
   },
   "devDependencies": {
     "husky": "^8.0.2"
