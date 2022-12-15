@@ -9,10 +9,10 @@ yarn test || (
     exit 1;
 )
 
-yarn test:e2e || (
-    echo '❌ API End To End Testing Failed. ❌';
-    exit 1;
-)
+# yarn test:e2e || (
+#     echo '❌ API End To End Testing Failed. ❌';
+#     exit 1;
+# )
 
 yarn lint || (
     echo '❌ API Lint Failed. ❌';
