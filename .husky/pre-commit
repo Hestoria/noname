@@ -1,0 +1,32 @@
+#!/bin/bash
+. "$(dirname "$0")/_/husky.sh"
+
+cd api
+
+# api server testing
+yarn test || (
+    echo '❌ API Unit Testing Failed. ❌';
+    exit 1;
+)
+
+yarn test:e2e || (
+    echo '❌ API End To End Testing Failed. ❌';
+    exit 1;
+)
+
+yarn lint || (
+    echo '❌ API Lint Failed. ❌';
+    exit 1;
+)
+
+# web server testing
+
+cd ../web
+
+yarn lint || (
+    echo '❌ Web Lint Failed. ❌';
+    exit 1;
+)
+
+exit 0;
+

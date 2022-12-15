@@ -3,7 +3,7 @@ import { Res } from '../types';
 
 @Injectable()
 export class AppService {
-  ping(): Res {
-    return { message: 'pong' };
-  }
+	ping(): Res {
+		return { message: 'pong' };
+	}
 }

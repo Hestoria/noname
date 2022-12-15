@@ -4,21 +4,21 @@ import * as request from 'supertest';
 import { AppModule } from './../src/app.module';
 
 describe('AppController (e2e)', () => {
-  let app: INestApplication;
+	let app: INestApplication;
 
-  beforeEach(async () => {
-    const moduleFixture: TestingModule = await Test.createTestingModule({
-      imports: [AppModule],
-    }).compile();
+	beforeEach(async () => {
+		const moduleFixture: TestingModule = await Test.createTestingModule({
+			imports: [AppModule],
+		}).compile();
 
-    app = moduleFixture.createNestApplication();
-    await app.init();
-  });
+		app = moduleFixture.createNestApplication();
+		await app.init();
+	});
 
-  it('ping server', () => {
-    return request(app.getHttpServer())
-      .get('/api/ping')
-      .expect(200)
-      .expect({ message: 'pong' });
-  });
+	it('ping server', () => {
+		return request(app.getHttpServer())
+			.get('/api/ping')
+			.expect(200)
+			.expect({ message: 'pong' });
+	});
 });
