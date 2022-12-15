@@ -6,6 +6,12 @@
 
 ```bash
 $ yarn setup
+
+# also run this if you setting up on mac
+
+$ chmod ug+x .husky/*
+$ chmod ug+x .git/hooks/*
+
 ```
 
 ### Running the app
