@@ -15,10 +15,10 @@ describe('AppController (e2e)', () => {
     await app.init();
   });
 
-  it('ping server', () => {
+  it('get user list', () => {
     return request(app.getHttpServer())
-      .get('/api/ping')
+      .get('/api/users')
       .expect(200)
-      .expect({ message: 'pong' });
+      .expect([{ id: 1 }, { id: 2 }]);
   });
 });
